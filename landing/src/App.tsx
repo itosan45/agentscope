@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, Shield, Zap, BarChart3, ChevronRight, Github, Twitter, Cpu, Globe, Rocket } from 'lucide-react';
+import { Activity, Shield, Zap, BarChart3, Github, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function App() {

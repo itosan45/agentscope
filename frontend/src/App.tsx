@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, LayoutDashboard, Database, Bell, Settings, Search, Filter, Play, ExternalLink, Clock, DollarSign, Cpu } from 'lucide-react';
+import { Activity, LayoutDashboard, Database, Bell, Settings, Search, Filter, ExternalLink, Clock, DollarSign, Cpu } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:10000/api/v1';
 const PROJECT_ID = 'default-project';
 
 interface Trace {
@@ -234,7 +234,7 @@ function StatCard({ icon, label, value, change, trend = "up" }: { icon: React.Re
   return (
     <div className="glass-card p-6 flex flex-col gap-2 relative overflow-hidden group">
       <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
-        {React.cloneElement(icon as React.ReactElement, { size: 48 })}
+        {React.isValidElement(icon) ? React.cloneElement(icon as React.ReactElement<any>, { size: 48 }) : icon}
       </div>
       <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{label}</span>
       <div className="flex items-end justify-between mt-1">
