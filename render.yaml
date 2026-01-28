@@ -6,17 +6,18 @@ services:
     envVars:
       - key: DATABASE_URL
         value: sqlite:///./data/agentscope.db
-    disk:
-      name: agentscope-db
-      mountPath: /app/data
-      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./agentscope.db
     rootDir: backend
+    plan: free
 
   # 管理ダッシュボード
   - type: web
     name: agentscope-dashboard
     runtime: docker
     rootDir: frontend
+    plan: free
     envVars:
       - key: VITE_API_URL
         fromService:
@@ -29,3 +30,4 @@ services:
     name: agentscope-landing
     runtime: docker
     rootDir: landing
+    plan: free
