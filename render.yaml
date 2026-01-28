@@ -1,0 +1,32 @@
+services:
+  # バックエンド (API)
+  - type: web
+    name: agentscope-backend
+    runtime: docker
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./data/agentscope.db
+    mountPath: /app/data
+    disk:
+      name: agentscope-db
+      mountPath: /app/data
+      sizeGB: 1
+    rootDir: backend
+
+  # 管理ダッシュボード
+  - type: web
+    name: agentscope-dashboard
+    runtime: docker
+    rootDir: frontend
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: agentscope-backend
+          type: web
+          property: host
+
+  # ランディングページ (世界への顔)
+  - type: web
+    name: agentscope-landing
+    runtime: docker
+    rootDir: landing

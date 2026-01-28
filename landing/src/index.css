@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 filter blur-3xl opacity-50;
+  }
+
+  .glass-panel {
+    @apply bg-slate-900/50 backdrop-blur-xl border border-slate-800 rounded-3xl;
+  }
+}

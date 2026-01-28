@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/agentscope.db
+    restart: always
+
+  dashboard:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: always
+
+  landing:
+    build: ./landing
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
