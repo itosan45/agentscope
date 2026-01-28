@@ -107,7 +107,7 @@ function App() {
             <div className={`px-3 py-1 bg-secondary rounded-full text-xs font-medium border ${loading ? 'text-muted-foreground border-border' : 'text-neon-blue border-neon-blue/20 animate-pulse'}`}>
               {loading ? 'Updating...' : 'Live Monitoring Active'}
             </div>
-            <button onClick={fetchData} className="p-2 hover:bg-secondary rounded-lg transition-colors">
+            <button onClick={fetchData} className="p-2 hover:bg-secondary rounded-lg transition-colors" aria-label="Refresh data">
               <Activity size={18} className="text-muted-foreground" />
             </button>
           </div>
@@ -118,7 +118,7 @@ function App() {
           {/* Stats Bar */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <StatCard icon={<Database className="text-neon-blue" />} label="Total Traces" value={metrics?.total_traces?.toString() || '0'} change="+12.5%" />
-            <StatCard icon={<Clock className="text-neon-purple" />} label="Avg. Latency" value={`${(metrics?.avg_duration_ms || 0 / 1000).toFixed(1)}s`} change="-4.2%" />
+            <StatCard icon={<Clock className="text-neon-purple" />} label="Avg. Latency" value={`${((metrics?.avg_duration_ms || 0) / 1000).toFixed(1)}s`} change="-4.2%" />
             <StatCard icon={<DollarSign className="text-neon-green" />} label="Total Cost" value={`$${(metrics?.total_cost_usd || 0).toFixed(4)}`} change="+8.1%" />
             <StatCard icon={<Cpu className="text-destructive" />} label="Error Rate" value={`${(metrics?.error_rate || 0).toFixed(1)}%`} change="-1.5%" trend="down" />
           </div>
@@ -139,7 +139,7 @@ function App() {
                     className="pl-10 pr-4 py-1.5 bg-background border border-border rounded-lg text-sm focus:ring-1 focus:ring-primary outline-none"
                   />
                 </div>
-                <button className="p-2 bg-secondary border border-border rounded-lg hover:bg-muted transition-colors">
+                <button className="p-2 bg-secondary border border-border rounded-lg hover:bg-muted transition-colors" aria-label="Filter traces">
                   <Filter size={16} />
                 </button>
               </div>
@@ -194,7 +194,7 @@ function App() {
                           {new Date(trace.created_at).toLocaleTimeString()}
                         </td>
                         <td className="px-6 py-4 text-right">
-                          <button className="p-2 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-secondary rounded-lg">
+                          <button className="p-2 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-secondary rounded-lg" aria-label="View trace details">
                             <ExternalLink size={14} className="text-primary" />
                           </button>
                         </td>
@@ -220,8 +220,8 @@ function NavItem({ icon, label, active, onClick }: { icon: React.ReactNode, labe
     <button
       onClick={onClick}
       className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${active
-          ? 'bg-primary/10 text-primary border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]'
-          : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+        ? 'bg-primary/10 text-primary border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]'
+        : 'text-muted-foreground hover:bg-muted hover:text-foreground'
         }`}
     >
       {icon}

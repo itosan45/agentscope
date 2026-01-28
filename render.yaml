@@ -3,18 +3,18 @@ services:
   - type: web
     name: agentscope-backend
     runtime: docker
+    plan: free
     envVars:
       - key: DATABASE_URL
         value: sqlite:///./agentscope.db
     rootDir: backend
-    plan: free
 
   # 管理ダッシュボード
-  - type: web
+  - type: static
     name: agentscope-dashboard
-    runtime: docker
     rootDir: frontend
-    plan: free
+    buildCommand: npm install && npm run build
+    publishDir: dist
     envVars:
       - key: VITE_API_URL
         fromService:
@@ -23,8 +23,8 @@ services:
           property: host
 
   # ランディングページ (世界への顔)
-  - type: web
+  - type: static
     name: agentscope-landing
-    runtime: docker
     rootDir: landing
-    plan: free
+    buildCommand: npm install && npm run build
+    publishDir: dist

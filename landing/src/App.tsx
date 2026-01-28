@@ -145,8 +145,8 @@ function App() {
           </div>
           <p className="text-slate-500 text-sm">© 2026 AgentScope Observability. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="p-2 text-slate-400 hover:text-white transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="p-2 text-slate-400 hover:text-white transition-colors"><Github size={20} /></a>
+            <a href="#" className="p-2 text-slate-400 hover:text-white transition-colors" aria-label="AgentScope on Twitter"><Twitter size={20} /></a>
+            <a href="#" className="p-2 text-slate-400 hover:text-white transition-colors" aria-label="AgentScope on GitHub"><Github size={20} /></a>
           </div>
         </div>
       </footer>
