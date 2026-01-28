@@ -9,9 +9,9 @@ services:
         value: sqlite:///./agentscope.db
     rootDir: backend
 
+staticSites:
   # 管理ダッシュボード
-  - type: static_site
-    name: agentscope-dashboard
+  - name: agentscope-dashboard
     rootDir: frontend
     buildCommand: npm install && npm run build
     publishDir: dist
@@ -23,8 +23,7 @@ services:
           property: host
 
   # ランディングページ (世界への顔)
-  - type: static_site
-    name: agentscope-landing
+  - name: agentscope-landing
     rootDir: landing
     buildCommand: npm install && npm run build
     publishDir: dist
