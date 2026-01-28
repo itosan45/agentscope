@@ -20,7 +20,7 @@ services:
         fromService:
           name: agentscope-backend
           type: web
-          property: host
+          property: url
 
   # ランディングページ (世界への顔)
   - type: web
