@@ -20,9 +20,12 @@ function App() {
             <a href="#docs" className="hover:text-white transition-colors">Docs</a>
           </div>
           <div>
-            <button className="px-4 py-2 bg-primary text-background font-bold rounded-full text-sm hover:scale-105 transition-transform active:scale-95">
+            <a
+              href="https://agentscope-dashboard-v2-jhjt.onrender.com"
+              className="px-4 py-2 bg-primary text-background font-bold rounded-full text-sm hover:scale-105 transition-transform active:scale-95 inline-block"
+            >
               Launch App
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -68,12 +71,18 @@ function App() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="w-full sm:w-auto px-8 py-4 bg-primary text-background font-bold rounded-full text-lg shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:shadow-[0_0_50px_rgba(56,189,248,0.5)] transition-all">
+            <a
+              href="https://buy.stripe.com/test_7sYaEXa6x9xH0Y71rs7EQ00"
+              className="w-full sm:w-auto px-8 py-4 bg-primary text-background font-bold rounded-full text-lg shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:shadow-[0_0_50px_rgba(56,189,248,0.5)] transition-all text-center"
+            >
               Start Monitoring for Free
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 font-bold rounded-full text-lg hover:bg-slate-800 transition-colors">
+            </a>
+            <a
+              href="#features"
+              className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 font-bold rounded-full text-lg hover:bg-slate-800 transition-colors text-center"
+            >
               Read Documentation
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -132,6 +141,48 @@ function App() {
               title="Cost Optimization"
               desc="Real-time cost tracking per project and per model. Never be surprised by an OpenAI bill again."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-32 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-16 tracking-tight">Simple Pricing. <span className="text-primary">Limitless Visibility.</span></h2>
+          <div className="flex justify-center">
+            <div className="w-full max-w-sm glass-panel p-10 bg-slate-900/50 border-primary/20 shadow-[0_0_50px_rgba(56,189,248,0.1)]">
+              <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
+              <div className="flex items-baseline justify-center gap-1 mb-6">
+                <span className="text-5xl font-extrabold text-white">¥2,900</span>
+                <span className="text-slate-500 font-medium">/month</span>
+              </div>
+              <ul className="text-left space-y-4 mb-10 text-slate-300">
+                <li className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  Unlimited Traces
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  Real-time Slack Alerts
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  Full Input/Output Visibility
+                </li>
+              </ul>
+              <a
+                href="https://buy.stripe.com/test_7sYaEXa6x9xH0Y71rs7EQ00"
+                className="block w-full py-4 bg-primary text-background font-extrabold rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95"
+              >
+                Get Started Now
+              </a>
+            </div>
           </div>
         </div>
       </section>
