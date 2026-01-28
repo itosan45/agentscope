@@ -5,9 +5,6 @@ services:
     runtime: docker
     envVars:
       - key: DATABASE_URL
-        value: sqlite:///./data/agentscope.db
-    envVars:
-      - key: DATABASE_URL
         value: sqlite:///./agentscope.db
     rootDir: backend
     plan: free
