@@ -10,7 +10,7 @@ services:
     rootDir: backend
 
   # 管理ダッシュボード
-  - type: static
+  - type: static_site
     name: agentscope-dashboard
     rootDir: frontend
     buildCommand: npm install && npm run build
@@ -23,7 +23,7 @@ services:
           property: host
 
   # ランディングページ (世界への顔)
-  - type: static
+  - type: static_site
     name: agentscope-landing
     rootDir: landing
     buildCommand: npm install && npm run build
