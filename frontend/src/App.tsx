@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Activity, LayoutDashboard, Database, Bell, Settings, Search, Filter, ExternalLink, Clock, DollarSign, Cpu } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:10000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/v1';
 const PROJECT_ID = 'default-project';
 
 interface Trace {

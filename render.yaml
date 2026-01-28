@@ -15,12 +15,6 @@ services:
     runtime: docker
     plan: free
     rootDir: frontend
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          name: agentscope-backend
-          type: web
-          property: url
 
   # ランディングページ (世界への顔)
   - type: web
