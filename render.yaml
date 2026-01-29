@@ -1,24 +1,24 @@
 services:
   # バックエンド (API)
   - type: web
-    name: agentscope-backend-v2
-    runtime: docker
-    plan: free
+    name: "agentscope-backend-v3"
+    runtime: "docker"
+    plan: "free"
     envVars:
-      - key: DATABASE_URL
-        value: sqlite:///./agentscope.db
-    rootDir: backend
+      - key: "DATABASE_URL"
+        value: "sqlite:///./agentscope.db"
+    rootDir: "backend"
 
   # 管理ダッシュボード
   - type: web
-    name: agentscope-dashboard-v2
-    runtime: docker
-    plan: free
-    rootDir: frontend
+    name: "agentscope-dashboard-v3"
+    runtime: "docker"
+    plan: "free"
+    rootDir: "frontend"
 
   # ランディングページ (世界への顔)
   - type: web
-    name: agentscope-landing-v2
-    runtime: docker
-    plan: free
-    rootDir: landing
+    name: "agentscope-landing-v3"
+    runtime: "docker"
+    plan: "free"
+    rootDir: "landing"
