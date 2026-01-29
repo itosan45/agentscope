@@ -72,7 +72,7 @@ function App() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
-              href="https://buy.stripe.com/test_7sYaEXa6x9xH0Y71rs7EQ00"
+              href="#pricing"
               className="w-full sm:w-auto px-8 py-4 bg-primary text-background font-bold rounded-full text-lg shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:shadow-[0_0_50px_rgba(56,189,248,0.5)] transition-all text-center"
             >
               Start Monitoring for Free
@@ -153,7 +153,7 @@ function App() {
             <div className="w-full max-w-sm glass-panel p-10 bg-slate-900/50 border-primary/20 shadow-[0_0_50px_rgba(56,189,248,0.1)]">
               <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
               <div className="flex items-baseline justify-center gap-1 mb-6">
-                <span className="text-5xl font-extrabold text-white">¥2,900</span>
+                <span className="text-5xl font-extrabold text-white">$19</span>
                 <span className="text-slate-500 font-medium">/month</span>
               </div>
               <ul className="text-left space-y-4 mb-10 text-slate-300">
@@ -177,7 +177,7 @@ function App() {
                 </li>
               </ul>
               <a
-                href="https://buy.stripe.com/test_7sYaEXa6x9xH0Y71rs7EQ00"
+                href="YOUR_NEW_STRIPE_LINK_HERE"
                 className="block w-full py-4 bg-primary text-background font-extrabold rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95"
               >
                 Get Started Now
