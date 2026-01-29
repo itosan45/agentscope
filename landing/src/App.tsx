@@ -72,7 +72,7 @@ function App() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
-              href="#pricing"
+              href="https://buy.stripe.com/test_cNicN5diJ7pzeOX2vw7EQ01"
               className="w-full sm:w-auto px-8 py-4 bg-primary text-background font-bold rounded-full text-lg shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:shadow-[0_0_50px_rgba(56,189,248,0.5)] transition-all text-center"
             >
               Start Monitoring for Free
@@ -177,7 +177,7 @@ function App() {
                 </li>
               </ul>
               <a
-                href="YOUR_NEW_STRIPE_LINK_HERE"
+                href="https://buy.stripe.com/test_cNicN5diJ7pzeOX2vw7EQ01"
                 className="block w-full py-4 bg-primary text-background font-extrabold rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95"
               >
                 Get Started Now
