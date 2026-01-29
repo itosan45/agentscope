@@ -1,12 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020617;
+  /* slate-950 */
+  --color-foreground: #f8fafc;
+  /* slate-50 */
+  --color-primary: #3b82f6;
+  /* blue-500 */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0f172a;
+  /* slate-900 */
+  --color-muted-foreground: #94a3b8;
+  /* slate-400 */
+  --color-border: #1e293b;
+  /* slate-800 */
+  --color-card: #0f172a;
+  /* slate-900 */
+  --color-destructive: #ef4444;
+  /* red-500 */
+  --color-neon-blue: #00f3ff;
+  --color-neon-purple: #bc13fe;
+  --color-neon-green: #00ff41;
+}
 
 @layer base {
   :root {
     color-scheme: dark;
   }
-  
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
@@ -16,7 +37,7 @@
   .neon-glow-blue {
     box-shadow: 0 0 10px rgba(0, 243, 255, 0.4), 0 0 20px rgba(0, 243, 255, 0.2);
   }
-  
+
   .glass-card {
     @apply bg-card/80 backdrop-blur-md border border-border rounded-xl;
   }

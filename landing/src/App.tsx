@@ -21,7 +21,7 @@ function App() {
           </div>
           <div>
             <a
-              href="https://agentscope-dashboard-v2-jhjt.onrender.com"
+              href="https://agentscope-dashboard-v3.onrender.com"
               className="px-4 py-2 bg-primary text-background font-bold rounded-full text-sm hover:scale-105 transition-transform active:scale-95 inline-block"
             >
               Launch App

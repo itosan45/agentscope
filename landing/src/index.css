@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020617;
+  /* slate-950 */
+  --color-foreground: #f8fafc;
+  /* slate-50 */
+  --color-primary: #38bdf8;
+  /* sky-400 */
+  --color-accent: #818cf8;
+  /* indigo-400 */
+  --color-border: #1e293b;
+  /* slate-800 */
+}
 
 @layer base {
   body {
